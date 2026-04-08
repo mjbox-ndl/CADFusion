@@ -1,12 +1,13 @@
 import argparse
 import json
+import os
 import random
 
 from huggingface_hub import login
 from tqdm import tqdm
 from utils import MAX_LENGTH, prepare_model_and_tokenizer
 
-login()
+login(token=os.environ.get("HF_TOKEN"))
 
 random.seed(0)
 

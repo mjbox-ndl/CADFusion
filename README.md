@@ -7,6 +7,17 @@ This repo is the official implementation of paper **[ICML 2025] Text-to-CAD Gene
 
 CADFusion is a text-to-CAD generation framework that leverages visual feedback to enhance the performance of large language models (LLMs) in generating CAD models from textual descriptions. It consists of two main components: sequential learning and visual learning. The sequential learning component fine-tunes LLMs on a text-to-CAD dataset, while the visual learning component alternates between training a visual feedback model and fine-tuning the LLM with the generated visual feedback.
 
+## Prerequisites
+
+### Hugging Face Authentication
+학습 및 추론 스크립트는 Hugging Face Hub에서 모델을 다운로드하기 위해 인증이 필요합니다. 환경 변수 `HF_TOKEN`을 설정해주세요:
+
+```bash
+export HF_TOKEN=<your-huggingface-token>
+```
+
+토큰은 [Hugging Face Settings > Access Tokens](https://huggingface.co/settings/tokens)에서 발급받을 수 있습니다.
+
 ## Installation
 
 - Create a conda environment and install the generic dependencies.

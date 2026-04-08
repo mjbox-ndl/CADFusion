@@ -11,7 +11,7 @@ from peft import LoraConfig, get_peft_model
 from transformers import Trainer, TrainingArguments
 from utils import prepare_model_and_tokenizer
 
-login() # put your huggingface token here
+login(token=os.environ.get("HF_TOKEN"))
 
 def setup_datasets(args, llama_tokenizer, transform_args={}):
     datasets = {
